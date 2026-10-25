@@ -1,9 +1,11 @@
 {
  "id": "atacama",
- "size": 512,
+ "imagery": "esri",
+ "size": 768,
  "widthMeters": 54093,
- "minHeight": 2333.208251953125,
- "maxHeight": 5934.90283203125,
+ "exaggeration": 1.35,
+ "minHeight": 2332.0673828125,
+ "maxHeight": 5964.9521484375,
  "lat": -22.86,
  "lon": -68.0,
  "bounds": {
@@ -11,5 +13,22 @@
   "east": -67.763671875,
   "north": -22.59372606392931,
   "south": -23.07973176244988
+ },
+ "landmarks": {
+  "Licancabur": [
+   0.773,
+   0.492,
+   5893
+  ],
+  "SanPedro": [
+   0.173,
+   0.652,
+   2444
+  ],
+  "Sairecabur": [
+   0.76,
+   0.28,
+   5603
+  ]
  }
 }

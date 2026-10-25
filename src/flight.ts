@@ -106,6 +106,7 @@ export class ChapterScene {
 
   update(camera: THREE.Camera, t: number, time: number, dt: number, fog: THREE.Color, visibility: number): void {
     (this.terrain.mesh.material.uniforms.camPos!.value as THREE.Vector3).copy(camera.position);
+    this.terrain.mesh.material.uniforms.time!.value = time;
     this.route.update(Math.min(1.05, t + 0.07), time, visibility, camera.position);
     this.clouds.update(camera, dt, visibility);
     for (const c of this.condors) c.update(time, fog, camera, visibility);

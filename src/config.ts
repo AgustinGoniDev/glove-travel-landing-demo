@@ -1,16 +1,19 @@
 /**
- * The flight: five chapters over real terrain. Camera paths are written in map coordinates
- * (u = west→east, v = north→south, both 0-1 over the terrain tile) and altitude in meters above sea
- * level, so they can be read against the map. The code keeps the camera above the ground.
+ * The journey: six stops from the ice of southern Patagonia, across the Andes and up to the desert.
+ * Camera paths are written in map coordinates (u = west→east, v = north→south, 0-1 over the terrain
+ * tile; landmark positions are in public/terrain/<id>/meta.json) and altitude in meters above sea
+ * level. The code keeps the camera above the ground. Each stop starts high in the clouds, comes down
+ * to its landmark and climbs back into the clouds, so the trip reads as one continuous flight.
  */
 
 export type Vec3 = [number, number, number];
+export type Lang = "en" | "es";
+export type Text = Record<Lang, string>;
 
 export interface Atmosphere {
-  /** Sky at the zenith and at the horizon. */
   top: string;
   horizon: string;
-  /** Haze color; it should be close to the horizon so the terrain melts into the sky. */
+  /** Haze color; close to the horizon so the terrain melts into the sky. */
   fog: string;
   /** Haze per kilometer. */
   fogDensity: number;
@@ -20,48 +23,138 @@ export interface Atmosphere {
   ambient: string;
   /** 0 day, 1 night. */
   night: number;
-  /** Altitude (m) where snow starts to settle on gentle slopes. */
+  /** Altitude (m) where snow settles on gentle slopes. */
   snowLine: number;
-  /** Color of the transition clouds. */
   cloud: string;
 }
 
 export interface Chapter {
-  id: "paine" | "glaciar" | "fitzroy" | "lagos" | "atacama";
-  nav: string;
-  kicker: string;
-  title: string;
-  text: string;
+  id: "chalten" | "glaciar" | "paine" | "lagos" | "rapanui" | "atacama";
+  nav: Text;
+  kicker: Text;
+  title: Text;
+  text: Text;
+  /** Where the stop is, for the journey map. */
+  place: { lat: number; lon: number };
+  /** Shown while flying in from the previous stop. */
+  leg: Text | null;
   cam: Vec3[];
   look: Vec3[];
   atmosphere: Atmosphere;
   condors: number;
+  /** The ocean gets its own shading (Rapa Nui). */
+  sea?: boolean;
 }
-
-export const EXAGGERATION = 1.35;
 
 export const CHAPTERS: Chapter[] = [
   {
-    id: "paine",
-    nav: "Torres del Paine",
-    kicker: "Chilean Patagonia",
-    title: "Torres del Paine",
-    text: "Granite towers, icy fjords, glaciers and wildlife. The trail starts where the road ends.",
+    id: "chalten",
+    nav: { en: "El Chaltén", es: "El Chaltén" },
+    kicker: { en: "El Chaltén, Argentina", es: "El Chaltén, Argentina" },
+    title: { en: "Fitz Roy", es: "Fitz Roy" },
+    text: {
+      en: "First light sets the granite on fire. Our journey starts where the trails do.",
+      es: "La primera luz enciende el granito. El viaje empieza donde empiezan los senderos.",
+    },
+    place: { lat: -49.27, lon: -73.04 },
+    leg: null,
     cam: [
-      [0.60, 1.02, 1700],
-      [0.55, 0.90, 1500],
-      [0.50, 0.79, 1900],
-      [0.53, 0.68, 3200],
-      [0.62, 0.55, 3600],
-      [0.72, 0.42, 3400],
+      [0.94, 0.76, 4300],
+      [0.82, 0.67, 3100],
+      [0.69, 0.58, 2500],
+      [0.59, 0.47, 2900],
+      [0.48, 0.42, 3700],
+      [0.36, 0.49, 4700],
     ],
     look: [
-      [0.51, 0.64, 2300],
-      [0.51, 0.63, 2300],
-      [0.52, 0.60, 2400],
-      [0.60, 0.48, 2600],
-      [0.64, 0.43, 2400],
-      [0.70, 0.30, 1400],
+      [0.489, 0.51, 2500],
+      [0.489, 0.51, 2500],
+      [0.489, 0.51, 2600],
+      [0.45, 0.53, 2500],
+      [0.38, 0.58, 2300],
+      [0.25, 0.70, 2700],
+    ],
+    atmosphere: {
+      top: "#4a6fa3",
+      horizon: "#f2c4a3",
+      fog: "#dab8a8",
+      fogDensity: 0.009,
+      sun: "#ff9f6c",
+      sunDir: [0.92, 0.22, 0.15],
+      ambient: "#5f6b8f",
+      night: 0,
+      snowLine: 2100,
+      cloud: "#f6e1d5",
+    },
+    condors: 2,
+  },
+  {
+    id: "glaciar",
+    nav: { en: "Perito Moreno", es: "Perito Moreno" },
+    kicker: { en: "Los Glaciares, Argentina", es: "Los Glaciares, Argentina" },
+    title: { en: "Perito Moreno", es: "Perito Moreno" },
+    text: {
+      en: "A wall of ice breaking into Lago Argentino. Glaciers, icebergs, remote estancias.",
+      es: "Una pared de hielo que se derrumba sobre el Lago Argentino. Glaciares, témpanos y estancias remotas.",
+    },
+    place: { lat: -50.47, lon: -73.04 },
+    leg: { en: "130 km south · El Calafate", es: "130 km al sur · El Calafate" },
+    cam: [
+      [0.970, 0.327, 3200],
+      [0.850, 0.397, 1200],
+      [0.750, 0.447, 760],
+      [0.710, 0.377, 1250],
+      [0.750, 0.307, 1950],
+      [0.840, 0.247, 3300],
+    ],
+    look: [
+      [0.660, 0.467, 600],
+      [0.660, 0.467, 300],
+      [0.640, 0.487, 300],
+      [0.620, 0.497, 350],
+      [0.570, 0.547, 500],
+      [0.500, 0.597, 900],
+    ],
+    atmosphere: {
+      top: "#4a83b8",
+      horizon: "#cfe2ea",
+      fog: "#bfd5df",
+      fogDensity: 0.011,
+      sun: "#fff6ea",
+      sunDir: [-0.3, 0.6, -0.75],
+      ambient: "#8296aa",
+      night: 0,
+      snowLine: 1150,
+      cloud: "#f2f6f8",
+    },
+    condors: 0,
+  },
+  {
+    id: "paine",
+    nav: { en: "Torres del Paine", es: "Torres del Paine" },
+    kicker: { en: "Chilean Patagonia", es: "Patagonia chilena" },
+    title: { en: "Torres del Paine", es: "Torres del Paine" },
+    text: {
+      en: "Across the Andes into Chile: granite towers, icy fjords, glaciers and wildlife.",
+      es: "Cruzamos los Andes hacia Chile: torres de granito, fiordos, glaciares y fauna.",
+    },
+    place: { lat: -50.94, lon: -72.97 },
+    leg: { en: "Crossing the Andes into Chile", es: "Cruzando los Andes hacia Chile" },
+    cam: [
+      [0.920, 0.196, 3900],
+      [0.790, 0.286, 2800],
+      [0.690, 0.386, 3400],
+      [0.600, 0.536, 3300],
+      [0.500, 0.746, 1300],
+      [0.470, 0.846, 2700],
+    ],
+    look: [
+      [0.632, 0.367, 2300],
+      [0.632, 0.367, 2300],
+      [0.600, 0.416, 2200],
+      [0.520, 0.556, 2000],
+      [0.513, 0.556, 2000],
+      [0.510, 0.536, 2600],
     ],
     atmosphere: {
       top: "#3f78b4",
@@ -72,104 +165,37 @@ export const CHAPTERS: Chapter[] = [
       sunDir: [0.35, 0.55, -0.75],
       ambient: "#7d8ea0",
       night: 0,
-      snowLine: 1350,
+      snowLine: 1650,
       cloud: "#f4f7f8",
     },
     condors: 3,
   },
   {
-    id: "glaciar",
-    nav: "Perito Moreno",
-    kicker: "Argentine Patagonia",
-    title: "Perito Moreno",
-    text: "A wall of ice sixty meters high, breaking into Lago Argentino. Glaciers, estancias and endless views.",
-    cam: [
-      [0.92, 0.46, 900],
-      [0.82, 0.50, 650],
-      [0.74, 0.53, 750],
-      [0.71, 0.46, 1250],
-      [0.75, 0.39, 1950],
-      [0.83, 0.36, 2700],
-    ],
-    look: [
-      [0.66, 0.55, 300],
-      [0.66, 0.55, 280],
-      [0.64, 0.57, 300],
-      [0.62, 0.58, 350],
-      [0.57, 0.63, 500],
-      [0.50, 0.68, 700],
-    ],
-    atmosphere: {
-      top: "#4a83b8",
-      horizon: "#cfe2ea",
-      fog: "#bfd5df",
-      fogDensity: 0.012,
-      sun: "#fff6ea",
-      sunDir: [-0.3, 0.6, -0.75],
-      ambient: "#8296aa",
-      night: 0,
-      snowLine: 1100,
-      cloud: "#f2f6f8",
-    },
-    condors: 0,
-  },
-  {
-    id: "fitzroy",
-    nav: "Fitz Roy",
-    kicker: "El Chaltén, Argentina",
-    title: "Fitz Roy",
-    text: "First light sets the granite on fire. Insider access, outsider perspective.",
-    cam: [
-      [0.88, 0.74, 1500],
-      [0.76, 0.65, 1600],
-      [0.65, 0.56, 2100],
-      [0.56, 0.46, 3300],
-      [0.45, 0.44, 3500],
-      [0.33, 0.55, 3000],
-    ],
-    look: [
-      [0.49, 0.51, 2700],
-      [0.49, 0.51, 2800],
-      [0.49, 0.51, 3000],
-      [0.42, 0.54, 2600],
-      [0.38, 0.57, 2400],
-      [0.18, 0.62, 1600],
-    ],
-    atmosphere: {
-      top: "#4f74a6",
-      horizon: "#f3c6a5",
-      fog: "#d9b4a6",
-      fogDensity: 0.009,
-      sun: "#ff9d6a",
-      sunDir: [0.92, 0.24, 0.15],
-      ambient: "#5d6a8e",
-      night: 0,
-      snowLine: 2150,
-      cloud: "#f7e2d6",
-    },
-    condors: 2,
-  },
-  {
     id: "lagos",
-    nav: "Lake District",
-    kicker: "Chilean Lake District",
-    title: "Osorno",
-    text: "Volcanoes, forests, rivers and hot springs, with Mapuche culture all around.",
+    nav: { en: "Lake District", es: "Región de los Lagos" },
+    kicker: { en: "Chilean Lake District", es: "Región de los Lagos, Chile" },
+    title: { en: "Osorno", es: "Osorno" },
+    text: {
+      en: "Volcanoes, forests, rivers, lakes and hot springs, with Mapuche culture all around.",
+      es: "Volcanes, bosques, ríos, lagos y termas, con la cultura mapuche siempre cerca.",
+    },
+    place: { lat: -41.1, lon: -72.49 },
+    leg: { en: "1,100 km north", es: "1.100 km al norte" },
     cam: [
-      [0.18, 0.56, 1000],
-      [0.36, 0.53, 1150],
-      [0.53, 0.53, 1700],
-      [0.64, 0.63, 2300],
-      [0.79, 0.60, 2700],
-      [0.86, 0.43, 2600],
+      [0.017, 0.720, 3600],
+      [0.197, 0.630, 1400],
+      [0.377, 0.580, 1500],
+      [0.517, 0.630, 2100],
+      [0.697, 0.600, 2600],
+      [0.797, 0.400, 3700],
     ],
     look: [
-      [0.70, 0.48, 1900],
-      [0.70, 0.48, 2000],
-      [0.70, 0.48, 2150],
-      [0.70, 0.48, 2250],
-      [0.70, 0.48, 2150],
-      [0.78, 0.36, 1500],
+      [0.615, 0.480, 2000],
+      [0.615, 0.480, 1900],
+      [0.615, 0.480, 2100],
+      [0.615, 0.480, 2300],
+      [0.615, 0.480, 2200],
+      [0.667, 0.300, 1700],
     ],
     atmosphere: {
       top: "#4a85bd",
@@ -186,24 +212,71 @@ export const CHAPTERS: Chapter[] = [
     condors: 0,
   },
   {
-    id: "atacama",
-    nav: "Atacama",
-    kicker: "San Pedro de Atacama, Chile",
-    title: "Atacama",
-    text: "Lunar valleys, salt flats and towering volcanoes, under one of the clearest night skies on the planet.",
+    id: "rapanui",
+    nav: { en: "Easter Island", es: "Isla de Pascua" },
+    kicker: { en: "Rapa Nui, Chile", es: "Rapa Nui, Chile" },
+    title: { en: "Easter Island", es: "Isla de Pascua" },
+    text: {
+      en: "Ancient Rapa Nui culture and the moai, alone in the middle of the Pacific.",
+      es: "La antigua cultura rapanui y sus moáis, solos en medio del Pacífico.",
+    },
+    place: { lat: -27.12, lon: -109.35 },
+    leg: { en: "3,700 km into the Pacific", es: "3.700 km mar adentro" },
     cam: [
-      [0.10, 0.70, 3300],
-      [0.30, 0.62, 3400],
+      [0.10, 0.95, 2600],
+      [0.22, 0.88, 1300],
+      [0.33, 0.87, 900],
+      [0.52, 0.78, 700],
+      [0.70, 0.67, 480],
+      [0.90, 0.48, 2000],
+    ],
+    look: [
+      [0.343, 0.78, 150],
+      [0.343, 0.78, 120],
+      [0.45, 0.72, 150],
+      [0.756, 0.576, 150],
+      [0.793, 0.589, 60],
+      [0.98, 0.40, 0],
+    ],
+    atmosphere: {
+      top: "#3d7fbf",
+      horizon: "#f3d6b0",
+      fog: "#d9c7b4",
+      fogDensity: 0.012,
+      sun: "#ffc98a",
+      sunDir: [-0.85, 0.28, 0.2],
+      ambient: "#6f87a0",
+      night: 0,
+      snowLine: 9000,
+      cloud: "#f7ecdf",
+    },
+    condors: 0,
+    sea: true,
+  },
+  {
+    id: "atacama",
+    nav: { en: "Atacama", es: "Atacama" },
+    kicker: { en: "San Pedro de Atacama, Chile", es: "San Pedro de Atacama, Chile" },
+    title: { en: "Atacama", es: "Atacama" },
+    text: {
+      en: "Lunar valleys, salt flats and towering volcanoes, under one of the clearest night skies on the planet.",
+      es: "Valles lunares, salares y volcanes imponentes, bajo uno de los cielos más limpios del planeta.",
+    },
+    place: { lat: -22.83, lon: -67.88 },
+    leg: { en: "Back to the mainland · the driest desert on Earth", es: "De vuelta al continente · el desierto más árido del mundo" },
+    cam: [
+      [0.06, 0.72, 4600],
+      [0.28, 0.63, 3400],
       [0.50, 0.56, 3800],
       [0.63, 0.53, 4700],
       [0.69, 0.58, 5700],
       [0.67, 0.62, 6600],
     ],
     look: [
-      [0.77, 0.49, 5200],
-      [0.77, 0.49, 5300],
-      [0.77, 0.49, 5450],
-      [0.77, 0.49, 5600],
+      [0.773, 0.49, 5200],
+      [0.773, 0.49, 5300],
+      [0.773, 0.49, 5450],
+      [0.773, 0.49, 5600],
       [0.86, 0.40, 7600],
       [0.90, 0.32, 12500],
     ],

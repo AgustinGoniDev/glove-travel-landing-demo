@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Glove Travel · All the way</title>
-    <meta name="description" content="Tailor-made journeys in Chile, Argentina, Uruguay and Antarctica. Fly over Patagonia and the Andes with Glove Travel." />
+    <meta name="description" content="Tailor-made journeys in Chile, Argentina, Uruguay and Antarctica. Fly from Patagonia to the Atacama desert with Glove Travel." />
     <link rel="icon" href="/brand/glove-mark.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,122 +27,173 @@
     <header class="topbar">
       <a class="brand" href="#top" aria-label="Glove Travel"><img src="/brand/glove-logo-white.svg" alt="Glove Travel" /></a>
       <nav class="topnav" aria-label="Main">
-        <a href="#destinations">Destinations</a>
-        <a href="#about">About us</a>
-        <a href="#footprints">Our footprints</a>
+        <a href="#about" data-i18n="nav.about">About us</a>
+        <a href="#destinations" data-i18n="nav.destinations">Destinations</a>
+        <a href="#footprints" data-i18n="nav.footprints">Our footprints</a>
+        <a href="#contact" data-i18n="nav.contact">Let's talk</a>
       </nav>
-      <a class="pill" href="#contact">Plan your journey <span class="pill-dot">→</span></a>
+      <div class="topbar-end">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button><span>|</span><button type="button" data-lang="es">ES</button>
+        </div>
+        <a class="pill" href="#contact"><span data-i18n="cta.plan">Plan your journey</span> <span class="pill-dot">→</span></a>
+      </div>
     </header>
 
-    <nav id="chapters" aria-label="Chapters of the flight"></nav>
+    <nav id="chapters" aria-label="Stops of the journey"></nav>
 
     <div id="titles" aria-live="polite">
       <section id="hero">
-        <span class="kicker">Chile · Argentina · Uruguay · Antarctica</span>
+        <span class="kicker" data-i18n="hero.kicker">Chile · Argentina · Uruguay · Antarctica</span>
         <h1 class="hero-title">All the way</h1>
-        <p class="hero-text">Tailor-made journeys across Patagonia, the Andes and beyond.</p>
+        <p class="hero-text" data-i18n="hero.text">Tailor-made journeys across Patagonia, the Andes and beyond.</p>
+      </section>
+      <section id="leg">
+        <span class="kicker" data-i18n="next">Next stop</span>
+        <h2 class="chapter-title" id="leg-title"></h2>
+        <p class="leg-text" id="leg-text"></p>
       </section>
       <section id="finale">
         <span class="kicker">Glove Travel</span>
-        <h2 class="chapter-title">Every journey, designed from scratch</h2>
-        <p class="chapter-text">We don't copy-paste. Each trip is the fulfillment of a dream.</p>
+        <h2 class="chapter-title" data-i18n="finale.title">Every journey, designed from scratch</h2>
+        <p class="chapter-text" data-i18n="finale.text">We don't copy-paste. Each trip is the fulfillment of a dream.</p>
       </section>
+      <p id="waiting"></p>
     </div>
 
     <div id="hud">
       <div class="hud-left">
-        <span id="hud-place">Torres del Paine</span>
-        <span id="hud-coords">50º 58' 00'' S   72º 58' 00'' W</span>
-        <span id="hud-altitude">1,700 m</span>
+        <span id="hud-place">El Chaltén</span>
+        <span id="hud-coords"></span>
+        <span id="hud-altitude"></span>
       </div>
-      <div id="scroll-hint"><span>Scroll to fly</span><i></i></div>
-      <span id="hud-counter">01 / 05</span>
+      <div id="scroll-hint"><span data-i18n="hint">Scroll to fly</span><i></i></div>
+      <div class="hud-right">
+        <div id="journey" data-i18n-aria="map.label" role="img"></div>
+        <span id="hud-counter">01 / 06</span>
+      </div>
     </div>
 
-    <section id="flight" aria-label="A flight over Patagonia, the Lake District and the Atacama desert"></section>
+    <section id="flight" aria-label="A flight from Patagonia to the Atacama desert"></section>
 
     <main id="content">
       <section id="about" class="intro">
-        <span class="eyebrow">Tailor-made journeys</span>
-        <h2 class="display">We curate tailor-made journeys in Chile, Argentina, Uruguay &amp; Antarctica.</h2>
-        <div class="intro-cols">
-          <p>An international team living in our chosen destinations, designing adventures for the inquisitive, savvy traveller, willing to share their unique perspective on this corner of the world.</p>
-          <p>Every trip is designed from scratch. We grant insider access like no one else does: passionate travellers, curious souls, detail lovers, natural hosts.</p>
-        </div>
+        <span class="eyebrow" data-i18n="about.eyebrow">Tailor-made journeys</span>
+        <h2 class="display" data-i18n="about.title">We curate tailor-made journeys in Chile, Argentina, Uruguay &amp; Antarctica.</h2>
+        <p class="lead" data-i18n="about.p1">An international team living in our chosen destinations, designing adventures for the inquisitive, savvy traveller.</p>
+        <ul class="pillars">
+          <li><strong data-i18n="pillar1.title">Designed from scratch</strong><span data-i18n="pillar1.text">Every itinerary starts on a blank page, with you.</span></li>
+          <li><strong data-i18n="pillar2.title">Insider access, outsider perspective</strong><span data-i18n="pillar2.text">We live where we travel, so we open doors like no one else.</span></li>
+          <li><strong data-i18n="pillar3.title">Natural hosts</strong><span data-i18n="pillar3.text">Passionate travellers, curious souls, detail lovers.</span></li>
+        </ul>
       </section>
 
       <section id="destinations" class="destinations">
         <header class="section-head">
-          <span class="eyebrow">Destinations</span>
-          <h2 class="display small">Travel is life changing. Reward the explorer within you.</h2>
+          <span class="eyebrow" data-i18n="dest.eyebrow">Destinations</span>
+          <h2 class="display small" data-i18n="dest.title">Travel is life changing. Reward the explorer within you.</h2>
         </header>
         <div class="grid">
-          <a class="card tall" href="#contact"><img src="/photos/commons/torres-del-paine-1.jpg" alt="The granite towers of Torres del Paine" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Chilean Patagonia</strong><small>Torres del Paine, wildlife, icy fjords, glaciers</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/perito-moreno-1.jpg" alt="The front of the Perito Moreno glacier" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>Argentine Patagonia</strong><small>Glaciers, icebergs, remote estancias</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/licancabur-2.jpg" alt="The Licancabur volcano over the Atacama desert" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Atacama</strong><small>Lunar valleys, geysers, salt flats, starry skies</small></span></a>
-          <a class="card wide" href="#contact"><img src="/photos/commons/fitz-roy-2.jpg" alt="Mount Fitz Roy at El Chaltén" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>El Chaltén</strong><small>Fitz Roy, Cerro Torre and the Southern Ice Field</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/osorno-2.jpg" alt="The Osorno volcano over Lake Llanquihue" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Lake District</strong><small>Volcanoes, forests, rivers, hot springs</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/moai-1.jpg" alt="The moai of Ahu Tongariki on Easter Island" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Easter Island</strong><small>Ancient Rapa Nui culture</small></span></a>
-          <a class="card tall" href="#contact"><img src="/photos/glove/iguazu.jpg" alt="The Iguazú falls" loading="lazy" style="object-position: center 85%" /><span class="card-meta"><em>Argentina</em><strong>Iguazú</strong><small>Rainforest and the roar of the falls</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/purmamarca-2.jpg" alt="The hill of seven colours in Purmamarca" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>Argentine Northwest</strong><small>Pre-Columbian heritage, colourful mountains</small></span></a>
-          <a class="card" href="#contact"><img src="/photos/commons/chiloe-1.jpg" alt="Palafito houses in Chiloé" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Chiloé</strong><small>Palafitos, wooden churches, magic</small></span></a>
-          <a class="card wide" href="#contact"><img src="/photos/commons/antarctica-1.jpg" alt="An iceberg off the Antarctic Peninsula" loading="lazy" /><span class="card-meta"><em>White continent</em><strong>Antarctica</strong><small>The last great journey, from Ushuaia</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/torres-del-paine-1.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.cl">Chile</em><strong data-i18n="dest.patagonia">Chilean Patagonia</strong><small data-i18n="dest.patagonia.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/perito-moreno-1.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.ar">Argentina</em><strong data-i18n="dest.glaciers">Glaciers</strong><small data-i18n="dest.glaciers.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/licancabur-2.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.cl">Chile</em><strong data-i18n="dest.atacama">Atacama</strong><small data-i18n="dest.atacama.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/moai-1.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.cl">Chile</em><strong data-i18n="dest.easter">Easter Island</strong><small data-i18n="dest.easter.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/osorno-2.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.cl">Chile</em><strong data-i18n="dest.lakes">Lake District</strong><small data-i18n="dest.lakes.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/mendoza-vineyard-1.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.ar">Argentina</em><strong data-i18n="dest.mendoza">Mendoza</strong><small data-i18n="dest.mendoza.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/glove/buenos-aires.jpg" alt="" loading="lazy" style="object-position: center 40%" /><span class="card-meta"><em data-i18n="country.ar">Argentina</em><strong data-i18n="dest.baires">Buenos Aires &amp; Pampas</strong><small data-i18n="dest.baires.text"></small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/antarctica-1.jpg" alt="" loading="lazy" /><span class="card-meta"><em data-i18n="country.aq">White continent</em><strong data-i18n="dest.antarctica">Antarctica</strong><small data-i18n="dest.antarctica.text"></small></span></a>
         </div>
       </section>
 
-      <section class="manifesto" style="--bg: url('/photos/commons/cuernos-del-paine-1.jpg')">
-        <div class="manifesto-inner">
-          <span class="eyebrow light">Meet the team</span>
-          <h2 class="display light">Insider access, outsider perspective.</h2>
-          <ul class="values">
-            <li><strong>Designed from scratch</strong><span>Every itinerary starts on a blank page, with you.</span></li>
-            <li><strong>Living where we travel</strong><span>An international team based in Chile and Argentina.</span></li>
-            <li><strong>Natural hosts</strong><span>The details, the gift, the visit: all the way.</span></li>
-          </ul>
+      <section id="footprints" class="footprints" style="--bg: url('/photos/commons/cuernos-del-paine-1.jpg')">
+        <div class="footprints-inner">
+          <span class="eyebrow light" data-i18n="fp.eyebrow">Our footprints</span>
+          <h2 class="display light small" data-i18n="fp.title">Designing travel experiences that inspire a better world.</h2>
+          <p data-i18n="fp.text"></p>
+          <div class="certs">
+            <a href="https://www.bcorporation.net/en-us/" target="_blank" rel="noreferrer" aria-label="Certified B Corporation"><img src="/brand/logo_bcc_white.png" alt="Certified B Corporation" /></a>
+            <a href="https://www.thelongrun.org/" target="_blank" rel="noreferrer" aria-label="The Long Run"><img src="/brand/logo_long_run_black.png" alt="The Long Run" class="invert" /></a>
+            <a href="https://www.tdplegacyfund.org/" target="_blank" rel="noreferrer" aria-label="The Legacy Fund"><img src="/brand/logo_legacy.jpg" alt="The Legacy Fund" class="round" /></a>
+          </div>
         </div>
       </section>
 
-      <section class="strip" aria-label="Gallery">
-        <div class="strip-track">
-          <img src="/photos/commons/condor-1.jpg" alt="An Andean condor over a glacier" loading="lazy" />
-          <img src="/photos/commons/guanaco-1.jpg" alt="A guanaco in Torres del Paine" loading="lazy" />
-          <img src="/photos/commons/atacama-flamingos-1.jpg" alt="Flamingos in the Atacama salt flat" loading="lazy" />
-          <img src="/photos/commons/marble-caves-2.jpg" alt="The Marble Caves of General Carrera lake" loading="lazy" />
-          <img src="/photos/commons/laguna-de-los-tres-1.jpg" alt="Laguna de los Tres under Fitz Roy" loading="lazy" />
-          <img src="/photos/commons/valle-de-la-luna-2.jpg" alt="Valle de la Luna at sunset" loading="lazy" />
-          <img src="/photos/commons/ushuaia-1.jpg" alt="The Les Éclaireurs lighthouse in the Beagle Channel" loading="lazy" />
-          <img src="/photos/commons/aconcagua-2.jpg" alt="Aconcagua" loading="lazy" />
-          <img src="/photos/commons/condor-1.jpg" alt="" aria-hidden="true" loading="lazy" />
-          <img src="/photos/commons/guanaco-1.jpg" alt="" aria-hidden="true" loading="lazy" />
-          <img src="/photos/commons/atacama-flamingos-1.jpg" alt="" aria-hidden="true" loading="lazy" />
-          <img src="/photos/commons/marble-caves-2.jpg" alt="" aria-hidden="true" loading="lazy" />
+      <section id="contact" class="contact">
+        <div class="contact-main">
+          <span class="eyebrow light" data-i18n="contact.eyebrow">Let's talk</span>
+          <h2 class="display light" data-i18n="contact.title">Where will your journey begin?</h2>
+          <form class="form" data-thanks>
+            <label><span data-i18n="contact.name">Name</span><input name="name" required autocomplete="name" /></label>
+            <label><span data-i18n="contact.email">Email</span><input name="email" type="email" required autocomplete="email" /></label>
+            <label class="full"><span data-i18n="contact.where">Where would you like to go?</span><input name="where" /></label>
+            <label class="full"><span data-i18n="contact.message">Tell us about your trip</span><textarea name="message" rows="3"></textarea></label>
+            <button class="pill solid" type="submit"><span data-i18n="contact.send">Send</span> <span class="pill-dot">→</span></button>
+            <p class="thanks" data-i18n="contact.thanks">Thank you for contacting us! We'll get back to you soon.</p>
+          </form>
         </div>
-      </section>
-
-      <section id="footprints" class="footprints">
-        <div>
-          <span class="eyebrow">Our footprints</span>
-          <h2 class="display small">Designing travel experiences that inspire a better world.</h2>
-        </div>
-        <p>We are a proud certified B Corporation and members of The Long Run. We work with locally based guides, support local providers and foster responsible tourism with an emphasis on cultural heritage and local traditions.</p>
-      </section>
-
-      <section id="contact" class="cta">
-        <span class="eyebrow light">Dare to travel differently</span>
-        <h2 class="display light">Where will your journey begin?</h2>
-        <a class="pill solid" href="mailto:info@glovetravel.com">Plan your journey <span class="pill-dot">→</span></a>
-        <p class="phones">+56 22 505 3770 (Chile) · +54 11 4519 2522 (Argentina) · 1-888-853-4101 · info@glovetravel.com</p>
+        <aside class="newsletter">
+          <h3 data-i18n="news.title">Be in the know</h3>
+          <p data-i18n="news.text">New journeys, stories and the best time to go.</p>
+          <form class="news-form" data-thanks>
+            <input type="email" required data-i18n-ph="news.email" placeholder="Your email" autocomplete="email" />
+            <button type="submit" data-i18n="news.send">Subscribe</button>
+            <p class="thanks" data-i18n="news.thanks">Thanks for subscribing!</p>
+          </form>
+        </aside>
       </section>
 
       <footer class="footer">
-        <img src="/brand/glove-logo-green.svg" alt="Glove Travel" />
-        <p>Glove Travel. All the way.</p>
-        <details>
-          <summary>Credits</summary>
-          <p>Terrain: AWS Terrain Tiles (SRTM, GMTED). Imagery: Esri World Imagery; Sentinel-2 cloudless by EOX IT Services (contains modified Copernicus Sentinel data 2021). Photos: Glove Travel and Wikimedia Commons:</p>
-          <ul id="credits-list"></ul>
-        </details>
-        <small>Concept demo · Australis AI</small>
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/brand/glove-logo-green.svg" alt="Glove Travel" />
+            <p data-i18n="foot.tagline">Glove Travel. All the way.</p>
+            <div class="lang dark" role="group" aria-label="Language">
+              <button type="button" data-lang="en">EN</button><span>|</span><button type="button" data-lang="es">ES</button>
+            </div>
+          </div>
+          <div>
+            <h4 data-i18n="foot.explore">Explore</h4>
+            <a href="https://glovetravel.com/eng/about-us" data-i18n="nav.about">About us</a>
+            <a href="https://glovetravel.com/eng/destinations" data-i18n="nav.destinations">Destinations</a>
+            <a href="https://glovetravel.com/eng/our-footprints" data-i18n="nav.footprints">Our footprints</a>
+            <a href="https://glovetravel.com/eng/villas" data-i18n="foot.villas">Villas</a>
+            <a href="https://glovetravel.com/eng/blog">Blog</a>
+            <a href="https://glovetravel.com/eng/bliss">Bliss</a>
+            <a href="https://glovetravel.com/eng/glove">+Glove</a>
+          </div>
+          <div>
+            <h4 data-i18n="foot.contact">Contact</h4>
+            <a href="tel:+56225053770">+56 22 505 3770 (Chile)</a>
+            <a href="tel:+541145192522">+54 11 4519 2522 (Argentina)</a>
+            <a href="tel:18888534101">1-888-853-4101 (USA)</a>
+            <a href="mailto:info@glovetravel.com">info@glovetravel.com</a>
+            <a href="mailto:mercedes@glovetravel.com" data-i18n="foot.feedback">Suggestions or feedback</a>
+          </div>
+          <div>
+            <h4 data-i18n="foot.follow">Follow us</h4>
+            <div class="social">
+              <a href="https://www.instagram.com/glovetravel/" target="_blank" rel="noreferrer" aria-label="Instagram"><img src="/brand/ico-instagram.svg" alt="" /></a>
+              <a href="https://www.facebook.com/byglovetravel" target="_blank" rel="noreferrer" aria-label="Facebook"><img src="/brand/ico-facebook.svg" alt="" /></a>
+              <a href="https://www.linkedin.com/company/glove-travel" target="_blank" rel="noreferrer" aria-label="LinkedIn"><img src="/brand/ico-linkedin.svg" alt="" /></a>
+              <a href="mailto:info@glovetravel.com" aria-label="Email"><img src="/brand/ico-mail.svg" alt="" /></a>
+            </div>
+            <h4 data-i18n="foot.certs">Certifications &amp; foundations</h4>
+            <div class="certs small">
+              <a href="https://www.bcorporation.net/en-us/" target="_blank" rel="noreferrer"><img src="/brand/logo_bcc.png" alt="Certified B Corporation" class="ink" /></a>
+              <a href="https://www.thelongrun.org/" target="_blank" rel="noreferrer"><img src="/brand/logo_long_run_black.png" alt="The Long Run" /></a>
+              <a href="https://www.tdplegacyfund.org/" target="_blank" rel="noreferrer"><img src="/brand/logo_legacy.jpg" alt="The Legacy Fund" class="round" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span data-i18n="foot.rights">© Glove Travel. All rights reserved.</span>
+          <details>
+            <summary data-i18n="foot.credits">Credits</summary>
+            <p data-i18n="foot.creditsText"></p>
+            <ul id="credits-list"></ul>
+          </details>
+          <small data-i18n="foot.demo">Concept demo · Australis AI</small>
+        </div>
       </footer>
     </main>
 
