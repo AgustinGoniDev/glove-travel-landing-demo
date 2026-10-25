@@ -1,0 +1,446 @@
+[
+ {
+  "file": "photos/commons/torres-del-paine-1.jpg",
+  "topic": "torres-del-paine",
+  "title": "Towers of Paine - Torres del Paine National Park 13.jpg",
+  "author": "Thomas Fuhrmann",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Towers_of_Paine_-_Torres_del_Paine_National_Park_13.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/torres-del-paine-2.jpg",
+  "topic": "torres-del-paine",
+  "title": "Towers of Paine - Torres del Paine National Park 15.jpg",
+  "author": "Thomas Fuhrmann",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Towers_of_Paine_-_Torres_del_Paine_National_Park_15.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/cuernos-del-paine-1.jpg",
+  "topic": "cuernos-del-paine",
+  "title": "Cuernos del Paine in Torres del Paine National Park.jpg",
+  "author": "Pedro Szekely from Los Angeles, USA",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cuernos_del_Paine_in_Torres_del_Paine_National_Park.jpg",
+  "size": [
+   1800,
+   1350
+  ]
+ },
+ {
+  "file": "photos/commons/cuernos-del-paine-2.jpg",
+  "topic": "cuernos-del-paine",
+  "title": "Cuernos del Paine, Parque Nacional Torres del Paine, Chile1.jpg",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cuernos_del_Paine,_Parque_Nacional_Torres_del_Paine,_Chile1.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/perito-moreno-1.jpg",
+  "topic": "perito-moreno",
+  "title": "Perito Moreno Glacier Patagonia Argentina Luca Galuzzi 2005.JPG",
+  "author": "Luca Galuzzi (Lucag)",
+  "license": "CC BY-SA 2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/perito-moreno-2.jpg",
+  "topic": "perito-moreno",
+  "title": "Trekking at Perito Moreno Glacier.jpg",
+  "author": "Fernando",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Trekking_at_Perito_Moreno_Glacier.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/fitz-roy-1.jpg",
+  "topic": "fitz-roy",
+  "title": "Monte Fitz Roy - Parque Nacional Los Glaciares - panoramio (1).jpg",
+  "author": "littletroll",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Monte_Fitz_Roy_-_Parque_Nacional_Los_Glaciares_-_panoramio_(1).jpg",
+  "size": [
+   1800,
+   828
+  ]
+ },
+ {
+  "file": "photos/commons/fitz-roy-2.jpg",
+  "topic": "fitz-roy",
+  "title": "Fitz Roy 2.jpg",
+  "author": "Prissantenbär",
+  "license": "Public domain",
+  "source": "https://commons.wikimedia.org/wiki/File:Fitz_Roy_2.jpg",
+  "size": [
+   1800,
+   1350
+  ]
+ },
+ {
+  "file": "photos/commons/laguna-de-los-tres-1.jpg",
+  "topic": "laguna-de-los-tres",
+  "title": "Laguna de los Tres color.jpg",
+  "author": "Almonroth",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Laguna_de_los_Tres_color.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/laguna-de-los-tres-2.jpg",
+  "topic": "laguna-de-los-tres",
+  "title": "Los Glaciares - Fitz Roy 005.jpg",
+  "author": "Gedankenstuecke",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Los_Glaciares_-_Fitz_Roy_005.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/licancabur-1.jpg",
+  "topic": "licancabur",
+  "title": "Volcán Licancabur, Chile, 2016-02-07, DD 01.JPG",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Licancabur,_Chile,_2016-02-07,_DD_01.JPG",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/licancabur-2.jpg",
+  "topic": "licancabur",
+  "title": "Volcán Licancabur, Bolivia, 2016-02-02, DD 42.JPG",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Licancabur,_Bolivia,_2016-02-02,_DD_42.JPG",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/valle-de-la-luna-1.jpg",
+  "topic": "valle-de-la-luna",
+  "title": "Anfiteatro, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 149.JPG",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Anfiteatro,_Valle_de_la_Luna,_San_Pedro_de_Atacama,_Chile,_2016-02-01,_DD_149.JPG",
+  "size": [
+   1800,
+   908
+  ]
+ },
+ {
+  "file": "photos/commons/valle-de-la-luna-2.jpg",
+  "topic": "valle-de-la-luna",
+  "title": "Duna Mayor, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 173-175 HDR.JPG",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Duna_Mayor,_Valle_de_la_Luna,_San_Pedro_de_Atacama,_Chile,_2016-02-01,_DD_173-175_HDR.JPG",
+  "size": [
+   1800,
+   891
+  ]
+ },
+ {
+  "file": "photos/commons/atacama-flamingos-1.jpg",
+  "topic": "atacama-flamingos",
+  "title": "Flamingos Laguna Chaxa 2018-11-22 - 1.jpg",
+  "author": "Z_thomas",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Flamingos_Laguna_Chaxa_2018-11-22_-_1.jpg",
+  "size": [
+   1800,
+   1011
+  ]
+ },
+ {
+  "file": "photos/commons/atacama-flamingos-2.jpg",
+  "topic": "atacama-flamingos",
+  "title": "Flamingos Laguna Chaxa 2018-11-22 - 6.jpg",
+  "author": "Z_thomas",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Flamingos_Laguna_Chaxa_2018-11-22_-_6.jpg",
+  "size": [
+   1800,
+   1011
+  ]
+ },
+ {
+  "file": "photos/commons/atacama-stars-2.jpg",
+  "topic": "atacama-stars",
+  "title": "Milky Way (colosimo-130705-012).jpg",
+  "author": "John Colosimo (colosimophotography.com)/ESO",
+  "license": "CC BY 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Milky_Way_(colosimo-130705-012).jpg",
+  "size": [
+   1800,
+   676
+  ]
+ },
+ {
+  "file": "photos/commons/osorno-2.jpg",
+  "topic": "osorno",
+  "title": "Volcán Osorno y lago Llanquihue desde el sector Los Riscos.jpg",
+  "author": "Jorge Morales Piderit",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_Osorno_y_lago_Llanquihue_desde_el_sector_Los_Riscos.jpg",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/petrohue-2.jpg",
+  "topic": "petrohue",
+  "title": "Saltos Del Petrohué (140771995).jpeg",
+  "author": "Nicolás Navarrete Carrasco",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Saltos_Del_Petrohu%C3%A9_(140771995).jpeg",
+  "size": [
+   1800,
+   1192
+  ]
+ },
+ {
+  "file": "photos/commons/moai-1.jpg",
+  "topic": "moai",
+  "title": "Ahu Tongariki cropped.jpg",
+  "author": "Rivi",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ahu_Tongariki_cropped.jpg",
+  "size": [
+   1800,
+   1197
+  ]
+ },
+ {
+  "file": "photos/commons/mendoza-vineyard-1.jpg",
+  "topic": "mendoza-vineyard",
+  "title": "Vineyard in Mendoza, Argentina.jpg",
+  "author": "David",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vineyard_in_Mendoza,_Argentina.jpg",
+  "size": [
+   1800,
+   1116
+  ]
+ },
+ {
+  "file": "photos/commons/chiloe-1.jpg",
+  "topic": "chiloe",
+  "title": "Palafitos, Castro, Chiloé, Chile - panoramio.jpg",
+  "author": "rodoluca",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Palafitos,_Castro,_Chilo%C3%A9,_Chile_-_panoramio.jpg",
+  "size": [
+   1733,
+   1050
+  ]
+ },
+ {
+  "file": "photos/commons/chiloe-2.jpg",
+  "topic": "chiloe",
+  "title": "Palafitos del Río Gamboa, Castro, Chiloé, Chile - panoramio.jpg",
+  "author": "rodoluca",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Palafitos_del_R%C3%ADo_Gamboa,_Castro,_Chilo%C3%A9,_Chile_-_panoramio.jpg",
+  "size": [
+   1800,
+   1131
+  ]
+ },
+ {
+  "file": "photos/commons/purmamarca-1.jpg",
+  "topic": "purmamarca",
+  "title": "Cerro de los Siete Colores 04.jpg",
+  "author": "Bernard Gagnon",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cerro_de_los_Siete_Colores_04.jpg",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/purmamarca-2.jpg",
+  "topic": "purmamarca",
+  "title": "Cerro de los Siete Colores 05.jpg",
+  "author": "Bernard Gagnon",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Cerro_de_los_Siete_Colores_05.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/condor-1.jpg",
+  "topic": "condor",
+  "title": "Condor des Andes mâle adulte.jpg",
+  "author": "Hugo Pedel",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Condor_des_Andes_m%C3%A2le_adulte.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/condor-2.jpg",
+  "topic": "condor",
+  "title": "Vultur gryphus -Colca Canyon, Peru -flying-8.jpg",
+  "author": "pululante",
+  "license": "CC BY 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Vultur_gryphus_-Colca_Canyon,_Peru_-flying-8.jpg",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/guanaco-1.jpg",
+  "topic": "guanaco",
+  "title": "Guanacos, Parque Nacional Torres del Paine, Chile5.jpg",
+  "author": "Diego Delso",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Guanacos,_Parque_Nacional_Torres_del_Paine,_Chile5.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/guanaco-2.jpg",
+  "topic": "guanaco",
+  "title": "Guanaco (Lama guanicoe) Leona Amarga 3.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Guanaco_(Lama_guanicoe)_Leona_Amarga_3.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/antarctica-1.jpg",
+  "topic": "antarctica",
+  "title": "114 once an iceberg now a Growler and a scupture V-P.jpg",
+  "author": "Virtual-Pano",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:114_once_an_iceberg_now_a_Growler_and_a_scupture_V-P.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/antarctica-2.jpg",
+  "topic": "antarctica",
+  "title": "Iceberg in Antarctica, Antarctic Peninsula.JPEG",
+  "author": "PaoMic",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Iceberg_in_Antarctica,_Antarctic_Peninsula.JPEG",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/ushuaia-1.jpg",
+  "topic": "ushuaia",
+  "title": "\"Les Eclaireurs\" Lighthouse in the Beagle Channel (5525329294).jpg",
+  "author": "Liam Quinn from Canada",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%22Les_Eclaireurs%22_Lighthouse_in_the_Beagle_Channel_(5525329294).jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/ushuaia-2.jpg",
+  "topic": "ushuaia",
+  "title": "Lighthouse in the Beagle Channel (5525428198).jpg",
+  "author": "Liam Quinn from Canada",
+  "license": "CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lighthouse_in_the_Beagle_Channel_(5525428198).jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/marble-caves-1.jpg",
+  "topic": "marble-caves",
+  "title": "Lago General Carrera - Capillas de Mármol 4.jpg",
+  "author": "Jpmorenosanchez",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lago_General_Carrera_-_Capillas_de_M%C3%A1rmol_4.jpg",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/marble-caves-2.jpg",
+  "topic": "marble-caves",
+  "title": "Lago General Carrera - Capillas de Mármol 2.jpg",
+  "author": "Jpmorenosanchez",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lago_General_Carrera_-_Capillas_de_M%C3%A1rmol_2.jpg",
+  "size": [
+   1800,
+   1013
+  ]
+ },
+ {
+  "file": "photos/commons/aconcagua-1.jpg",
+  "topic": "aconcagua",
+  "title": "Aconcagua Provincial Park 04.jpg",
+  "author": "Bernard Gagnon",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Aconcagua_Provincial_Park_04.jpg",
+  "size": [
+   1800,
+   1200
+  ]
+ },
+ {
+  "file": "photos/commons/aconcagua-2.jpg",
+  "topic": "aconcagua",
+  "title": "Aconcagua 13.JPG",
+  "author": "Mariordo Mario Roberto Duran Ortiz",
+  "license": "CC BY 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Aconcagua_13.JPG",
+  "size": [
+   1800,
+   1350
+  ]
+ }
+]

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glove Travel · All the way</title>
+    <meta name="description" content="Tailor-made journeys in Chile, Argentina, Uruguay and Antarctica. Fly over Patagonia and the Andes with Glove Travel." />
+    <link rel="icon" href="/brand/glove-mark.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="loader" aria-live="polite">
+      <div class="loader-mark">
+        <span class="loader-diamond"></span>
+        <img src="/brand/glove-logo-white.svg" alt="Glove Travel" />
+      </div>
+      <span id="loader-percent">0%</span>
+    </div>
+
+    <canvas id="scene" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Glove Travel"><img src="/brand/glove-logo-white.svg" alt="Glove Travel" /></a>
+      <nav class="topnav" aria-label="Main">
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About us</a>
+        <a href="#footprints">Our footprints</a>
+      </nav>
+      <a class="pill" href="#contact">Plan your journey <span class="pill-dot">→</span></a>
+    </header>
+
+    <nav id="chapters" aria-label="Chapters of the flight"></nav>
+
+    <div id="titles" aria-live="polite">
+      <section id="hero">
+        <span class="kicker">Chile · Argentina · Uruguay · Antarctica</span>
+        <h1 class="hero-title">All the way</h1>
+        <p class="hero-text">Tailor-made journeys across Patagonia, the Andes and beyond.</p>
+      </section>
+      <section id="finale">
+        <span class="kicker">Glove Travel</span>
+        <h2 class="chapter-title">Every journey, designed from scratch</h2>
+        <p class="chapter-text">We don't copy-paste. Each trip is the fulfillment of a dream.</p>
+      </section>
+    </div>
+
+    <div id="hud">
+      <div class="hud-left">
+        <span id="hud-place">Torres del Paine</span>
+        <span id="hud-coords">50º 58' 00'' S   72º 58' 00'' W</span>
+        <span id="hud-altitude">1,700 m</span>
+      </div>
+      <div id="scroll-hint"><span>Scroll to fly</span><i></i></div>
+      <span id="hud-counter">01 / 05</span>
+    </div>
+
+    <section id="flight" aria-label="A flight over Patagonia, the Lake District and the Atacama desert"></section>
+
+    <main id="content">
+      <section id="about" class="intro">
+        <span class="eyebrow">Tailor-made journeys</span>
+        <h2 class="display">We curate tailor-made journeys in Chile, Argentina, Uruguay &amp; Antarctica.</h2>
+        <div class="intro-cols">
+          <p>An international team living in our chosen destinations, designing adventures for the inquisitive, savvy traveller, willing to share their unique perspective on this corner of the world.</p>
+          <p>Every trip is designed from scratch. We grant insider access like no one else does: passionate travellers, curious souls, detail lovers, natural hosts.</p>
+        </div>
+      </section>
+
+      <section id="destinations" class="destinations">
+        <header class="section-head">
+          <span class="eyebrow">Destinations</span>
+          <h2 class="display small">Travel is life changing. Reward the explorer within you.</h2>
+        </header>
+        <div class="grid">
+          <a class="card tall" href="#contact"><img src="/photos/commons/torres-del-paine-1.jpg" alt="The granite towers of Torres del Paine" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Chilean Patagonia</strong><small>Torres del Paine, wildlife, icy fjords, glaciers</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/perito-moreno-1.jpg" alt="The front of the Perito Moreno glacier" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>Argentine Patagonia</strong><small>Glaciers, icebergs, remote estancias</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/licancabur-2.jpg" alt="The Licancabur volcano over the Atacama desert" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Atacama</strong><small>Lunar valleys, geysers, salt flats, starry skies</small></span></a>
+          <a class="card wide" href="#contact"><img src="/photos/commons/fitz-roy-2.jpg" alt="Mount Fitz Roy at El Chaltén" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>El Chaltén</strong><small>Fitz Roy, Cerro Torre and the Southern Ice Field</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/osorno-2.jpg" alt="The Osorno volcano over Lake Llanquihue" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Lake District</strong><small>Volcanoes, forests, rivers, hot springs</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/moai-1.jpg" alt="The moai of Ahu Tongariki on Easter Island" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Easter Island</strong><small>Ancient Rapa Nui culture</small></span></a>
+          <a class="card tall" href="#contact"><img src="/photos/glove/iguazu.jpg" alt="The Iguazú falls" loading="lazy" style="object-position: center 85%" /><span class="card-meta"><em>Argentina</em><strong>Iguazú</strong><small>Rainforest and the roar of the falls</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/purmamarca-2.jpg" alt="The hill of seven colours in Purmamarca" loading="lazy" /><span class="card-meta"><em>Argentina</em><strong>Argentine Northwest</strong><small>Pre-Columbian heritage, colourful mountains</small></span></a>
+          <a class="card" href="#contact"><img src="/photos/commons/chiloe-1.jpg" alt="Palafito houses in Chiloé" loading="lazy" /><span class="card-meta"><em>Chile</em><strong>Chiloé</strong><small>Palafitos, wooden churches, magic</small></span></a>
+          <a class="card wide" href="#contact"><img src="/photos/commons/antarctica-1.jpg" alt="An iceberg off the Antarctic Peninsula" loading="lazy" /><span class="card-meta"><em>White continent</em><strong>Antarctica</strong><small>The last great journey, from Ushuaia</small></span></a>
+        </div>
+      </section>
+
+      <section class="manifesto" style="--bg: url('/photos/commons/cuernos-del-paine-1.jpg')">
+        <div class="manifesto-inner">
+          <span class="eyebrow light">Meet the team</span>
+          <h2 class="display light">Insider access, outsider perspective.</h2>
+          <ul class="values">
+            <li><strong>Designed from scratch</strong><span>Every itinerary starts on a blank page, with you.</span></li>
+            <li><strong>Living where we travel</strong><span>An international team based in Chile and Argentina.</span></li>
+            <li><strong>Natural hosts</strong><span>The details, the gift, the visit: all the way.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="strip" aria-label="Gallery">
+        <div class="strip-track">
+          <img src="/photos/commons/condor-1.jpg" alt="An Andean condor over a glacier" loading="lazy" />
+          <img src="/photos/commons/guanaco-1.jpg" alt="A guanaco in Torres del Paine" loading="lazy" />
+          <img src="/photos/commons/atacama-flamingos-1.jpg" alt="Flamingos in the Atacama salt flat" loading="lazy" />
+          <img src="/photos/commons/marble-caves-2.jpg" alt="The Marble Caves of General Carrera lake" loading="lazy" />
+          <img src="/photos/commons/laguna-de-los-tres-1.jpg" alt="Laguna de los Tres under Fitz Roy" loading="lazy" />
+          <img src="/photos/commons/valle-de-la-luna-2.jpg" alt="Valle de la Luna at sunset" loading="lazy" />
+          <img src="/photos/commons/ushuaia-1.jpg" alt="The Les Éclaireurs lighthouse in the Beagle Channel" loading="lazy" />
+          <img src="/photos/commons/aconcagua-2.jpg" alt="Aconcagua" loading="lazy" />
+          <img src="/photos/commons/condor-1.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <img src="/photos/commons/guanaco-1.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <img src="/photos/commons/atacama-flamingos-1.jpg" alt="" aria-hidden="true" loading="lazy" />
+          <img src="/photos/commons/marble-caves-2.jpg" alt="" aria-hidden="true" loading="lazy" />
+        </div>
+      </section>
+
+      <section id="footprints" class="footprints">
+        <div>
+          <span class="eyebrow">Our footprints</span>
+          <h2 class="display small">Designing travel experiences that inspire a better world.</h2>
+        </div>
+        <p>We are a proud certified B Corporation and members of The Long Run. We work with locally based guides, support local providers and foster responsible tourism with an emphasis on cultural heritage and local traditions.</p>
+      </section>
+
+      <section id="contact" class="cta">
+        <span class="eyebrow light">Dare to travel differently</span>
+        <h2 class="display light">Where will your journey begin?</h2>
+        <a class="pill solid" href="mailto:info@glovetravel.com">Plan your journey <span class="pill-dot">→</span></a>
+        <p class="phones">+56 22 505 3770 (Chile) · +54 11 4519 2522 (Argentina) · 1-888-853-4101 · info@glovetravel.com</p>
+      </section>
+
+      <footer class="footer">
+        <img src="/brand/glove-logo-green.svg" alt="Glove Travel" />
+        <p>Glove Travel. All the way.</p>
+        <details>
+          <summary>Credits</summary>
+          <p>Terrain: AWS Terrain Tiles (SRTM, GMTED). Imagery: Esri World Imagery; Sentinel-2 cloudless by EOX IT Services (contains modified Copernicus Sentinel data 2021). Photos: Glove Travel and Wikimedia Commons:</p>
+          <ul id="credits-list"></ul>
+        </details>
+        <small>Concept demo · Australis AI</small>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
